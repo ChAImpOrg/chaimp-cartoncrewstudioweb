@@ -1,0 +1,5 @@
+.env
+.env.local
+.env.secrets.local
+.DS_Store
+Thumbs.db
