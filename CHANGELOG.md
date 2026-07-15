@@ -3,6 +3,22 @@
 All notable changes to the CartonCrewStudio site are documented here.
 This project follows [Semantic Versioning](https://semver.org/).
 
+## [1.0.1] — 2026-07-15
+
+### Added
+- Gitleaks secret scanning on every pull request and every push to `main` (`AB#331`). Uses the
+  upstream gitleaks binary rather than `gitleaks-action`, which requires a paid licence for org
+  accounts. This repo previously had **no secret scanning at all** — and it is **public**, so a
+  credential committed here would be world-readable the moment it landed.
+- `.gitleaks.toml` extending the upstream default ruleset with the credential shapes ChAImp uses.
+
+### Notes
+- **Full-history scan at this version: clean.** 1 commit scanned, no findings.
+- No allowlist entries beyond the standard `.env.example` path. Unlike `chaimp-website`, this repo
+  carries no Cloudflare beacon token, so it needs no exemption for one — every allowlist entry is a
+  hole, and holes are not added pre-emptively.
+- GitHub Pages deployment is unaffected.
+
 ## [1.0.0] — 2026-06-29
 
 ### Added
