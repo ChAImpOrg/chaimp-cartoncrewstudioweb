@@ -37,3 +37,5 @@ python -m http.server 8000
 
 Navy `#0B2E66` · Teal `#00B488` · Yellow `#F4B71E`, plus watercolor accents —
 sampled from the logo, kept consistent with the ChAImp / CartonCrew family.
+
+<!-- AB#318 anti-deadlock probe - closed unmerged, never lands -->
